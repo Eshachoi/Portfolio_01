@@ -6,15 +6,18 @@ body {
     overflow-x: hidden;
     background-color: #F6F2EC;
 }
+
+/*header 시작*/
 header {
     width: 100%;
     height: 100px;
-    padding: 10px 50px;
+    padding: 0 50px;
     box-sizing: border-box;
 }
 .header_content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .header_content a {
     width: 110px;
@@ -25,7 +28,7 @@ header {
     font-size: 23px;
 }
 .logo img {
- width: 108px;
+ width: 110px;
  height: 90px;
 }
 .menu_btn i {
@@ -39,6 +42,7 @@ header {
     color: #595049;
     cursor: pointer;
     z-index: 1001;
+    position: relative;
 }
 /*메뉴 숨김*/
 .nav_menu {
@@ -47,8 +51,7 @@ header {
   right: -300px;
   width: 300px;
   height: 100vh;
-  background-color: #595049;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #F6F2EC;
   list-style: none;
   padding: 120px 30px;
   box-sizing: border-box;
@@ -56,7 +59,7 @@ header {
   flex-direction: column;
   gap: 30px;
   transition: right 0.3s ease;
-  z-index: 9999;
+  z-index: 1000;
 }
 
 .nav_menu.active {
@@ -66,7 +69,7 @@ header {
 .nav_menu li a {
   text-decoration: none;
   font-family: "Antic Didone", serif;
-  color: #f8f6f2;
+  color: #595049;
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
@@ -74,3 +77,51 @@ header {
 .nav_menu li a:hover {
   color: #A48D78;
 }
+/*header 끝*/
+
+/*main 시작*/
+.main_view {
+  display: flex;
+  flex-direction: row;
+}
+
+.main_left {
+  width: 807px;
+  height: 1000px;
+}
+.content_box h2 {
+  font-family: "Antic Didone", serif;
+  font-size: 73px;
+  color: #595049;
+  line-height: 1.2;
+  margin-top: 300px;
+  margin-left: 126px;
+}
+.content_box p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  color: #595049;
+  line-height: 1.5;
+  margin-top: 30px;
+  margin-left: 126px;
+}
+.content_box a {
+  display: inline-block;
+  font-family: "Antic Didone", serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #595049;
+  border: 1px solid #A48D78;
+  border-radius: 50px;
+  padding: 16px 10px;
+  margin-left: 190px;
+  margin-top: 30px;
+}
+  .main_right {
+  width: 1113px;
+  height: 1000px;
+  padding: 16px;
+}
+
+/*main 끝*/

@@ -35,7 +35,7 @@
     </header>
 
     <main>
-        <section>
+        <section class="main_view">
             <div class="main_left">
                 <div class="content_box">
                     <h2>
@@ -254,7 +254,16 @@
         </div>
     </footer>
 
-    <script type="javascript" src="./script.js"></script>
+
+
+    <script>
+        const menuBtn = document.querySelector('.menu_btn');
+const navMenu = document.querySelector('.nav_menu');
+
+menuBtn.addEventListener('click',()=>{
+    navMenu.classList.toggle("active");
+});
+    </script>
 </body>
 
 </html>
