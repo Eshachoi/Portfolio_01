@@ -128,11 +128,74 @@ header {
 
 /*About 시작*/
 .about {
-  width: auto;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 150px 0;
+  overflow: hidden;
+  margin-top: 300px;
 }
-.about
+.about .img_box {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+}
+.about .img_box_img01,
+.about .img_box_img02,
+.about .img_box_img03 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  position: absolute;  
+}
 
+.about .img_box_img01 {
+  top: 70px;
+  left: 15%;
+  width: 35%;
+}
 
-
+.about .img_box_img02 {
+  top: 170px;
+  right: 19%;
+  width: 25%;
+}
+.about .img_box_img03 {
+  bottom: 100px;
+  left: 40%;
+  width: 22%;
+}
+.about .text_box {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 550px;
+}
+.about .text_box h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.4rem;
+  color: #595049;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+.about p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #595049;
+  margin: 6px 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+.about h3.show,
+.about p.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.about p:nth-child(2).show { transition-delay: 0.2s;}
+.about p:nth-child(3).show {transition-delay: 0.4s;}
+.about p:nth-child(4).show {transition-delay: 0.6s;}
 /*About 끝*/
