@@ -175,22 +175,40 @@ header {
 }
 .hide_text {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(60px);
+  will-change: transform, opacity;
 }
+.show_text {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease-out;
+}
+.about .text_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+}
+
 .about .text_box h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 3.6rem;
-  color: #595049;
+  color: #3e322a;
   
 }
 .about p {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 2.4rem;
-  color: #595049;
+  color: #3e322a;
   margin: 6px 0;
+}
+.parallax_active {
+  transform: translateY(var(--parallax-shift, 0px));
 }
 
 /*About 끝*/
