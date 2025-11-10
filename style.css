@@ -131,7 +131,6 @@ header {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 150px 0;
   overflow: hidden;
   margin-top: 300px;
 }
@@ -151,51 +150,47 @@ header {
 }
 
 .about .img_box_img01 {
-  top: 70px;
+  top: 10%;
   left: 15%;
   width: 35%;
 }
 
 .about .img_box_img02 {
-  top: 170px;
-  right: 19%;
+  top: 18%;
+  right: 17%;
   width: 25%;
 }
 .about .img_box_img03 {
-  bottom: 100px;
-  left: 40%;
-  width: 22%;
+  bottom: 2%;
+  left: 38%;
+  width: 30%;
 }
 .about .text_box {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  z-index: 5;
   text-align: center;
-  margin-top: 550px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hide_text {
+  opacity: 0;
+  transform: translateY(40px);
 }
 .about .text_box h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 2.4rem;
+  font-size: 3.6rem;
   color: #595049;
-  transform: translateY(40px);
-  transition: 0.6s ease;
+  
 }
 .about p {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 2.4rem;
   color: #595049;
   margin: 6px 0;
-  transform: translateY(40px);
-  transition: 0.8s ease;
 }
-.about h3.show,
-.about p.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-.about p:nth-child(2).show { transition-delay: 0.2s;}
-.about p:nth-child(3).show {transition-delay: 0.4s;}
-.about p:nth-child(4).show {transition-delay: 0.6s;}
+
 /*About 끝*/
