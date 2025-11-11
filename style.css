@@ -218,31 +218,49 @@ header {
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
-.title_wrap {
+.portfolio .title_wrap {
   position: relative;
-  text-align: center;
-  margin-top: 150px
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: column;
+  align-items: center;
+  justify-content: center;
+}
+.deco_square {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .deco_square img{
+  width: 170px;
+  height: 170px;
   position: absolute;
-  top: -20px;
-  left: calc(50% - 140px);
-  width: 100px;
-  height: 100px;
+  top: 20px;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 0;
 }
-.title_wrap .section_title {
+.section_title {
+  position: relative;
+  z-index: 1;
   font-family: "Antic Didone", serif;
-  font-size: 36px;
+  font-size: 48px;
   color: #595049;
-  transform: translateY(40px);
+  transform: translateY(150px);
+  letter-spacing: 2px;
 }
 .scroll_container {
   width: auto;
   height: auto;
   overflow: auto;
   white-space: nowrap;
-  padding: 50px 0;
+  padding: 200px 0;
   display: flex;
   gap: 30px;
   box-sizing: border-box;
@@ -289,5 +307,72 @@ header {
 /*rest 끝*/
 
 /*process 시작*/
-.
+.process {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: block;
+}
+.process .title_wrap {
+  position: relative;
+  text-align: left;
+  margin: 150px 0 0 100px;
+}
+.deco_square {
+  position: relative;
+  
+}
+.deco_square img {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  z-index: 0;
+}
+.process .section_title {
+  position: relative;
+  z-index: 1;
+  font-family: "Antic Didone", serif;
+  font-size: 48px;
+  color: #595049;
+  transform: translateY(90px);
+  letter-spacing: 2px;
+  margin-left: 90px;
+}
+.intro_text {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 200px 0 0 100px;
+}
+.intro_text p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  color: #595049;
+  line-height: 1.5;
+}
+
+.process_tabs {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 150px 0;
+}
+.tab .num {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 96px;
+  font-weight: bold;
+  color: #595049;
+  opacity: 0.1;
+}
+.tab .label {
+  font-family: "Antic Didone", serif;
+  font-size: 36px;
+  color: #595049;
+  margin-top: -50px;
+  margin-left: 70px;
+}
+
 /*process 끝*/
