@@ -12,30 +12,31 @@
 </head>
 
 <body>
+    <header class="header_content">
+        <div class="header_menu">
+            <a href="#inquiry" class="contact_btn">Contact</a>
+            
+            <h1 class="logo">
+                <img src="./image/logo1.png" alt="회사 로고">
+            </h1>
+            <!--햄버거 메뉴-->
+            <nav class="nav_area">
+                <p class="menu_btn" aria-label="메뉴열기">
+                    <i class="fa-solid fa-bars"></i>
+                </p>
+                <ul class="nav_menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#service">Service & Expertise</a></li>
+                    <li><a href="#contact">견적문의</a></li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
     <section class="main_section">
-        <header class="header_contents">
-            <div class="header_menu">
-                <a href="inquiry">Contact</a>
-
-                <h1 class="logo">
-                    <img src="./image/logo1.png" alt="회사 로고">
-                </h1>
-                <!--풀온 메뉴-->
-                <nav>
-                    <p class="menu_btn" aria-label="메뉴열기">
-                        <i class="fa-solid fa-bars"></i>
-                    </p>
-                    <ul class="nav_menu">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#process">Process</a></li>
-                        <li><a href="#service">Service & Expertise</a></li>
-                        <li><a href="#contact">견적문의</a></li>
-                    </ul>
-                </nav>
-        </header>
-
-        <div class="header_main">
+        <div class="main_wrapper">
             <div class="main_left">
                 <div class="content_box">
                     <h2>
@@ -46,18 +47,19 @@
                     <p class="sub_text">
                         공간의 본질을 담은 디자인
                     </p>
-                    <a href="portfolio">View Projects</a>
+                    <a href="#portfolio" class="view_btn">View Projects</a>
                 </div>
             </div>
+            
             <figure class="main_right">
                 <img src="./image/main.png" alt="공간 디자인 보여주는 메인 이미지">
             </figure>
         </div>
     </section>
-
-
+    
     <main>
-        <div class="about">
+        <!--About section-->
+        <section id="about" class="about">
             <div class="about_pic">
                 <figure class="img_box_img01">
                     <img src="./image/about1.png" alt="office interior image">
@@ -77,13 +79,13 @@
                 <p>we explore</p>
                 <p>the essence of space.</p>
             </div>
-        </div>
+        </section>
 
-
-        <div class="portfolio">
+        <!--Portfolio section-->
+        <section id="portfolio" class="portfolio">
             <div class="title_wrap">
                 <figure class="deco_square">
-                    <img src="decosquare.png" alt="장식 사각형">
+                    <img src="./image/decosquare.png" alt="장식사각형">
                 </figure>
                 <h2 class="section_title">Portfolio</h2>
             </div>
@@ -107,7 +109,7 @@
                     <img src="./image/portfolio06.png" alt="욕실 인테리어 사진">
                 </li>
             </ul>
-        </div>
+        </section>
 
 
         <div class="rest">
@@ -121,10 +123,11 @@
             </div>
         </div>
 
-        <div class="process">
+        <!--process section-->
+        <section id="process" class="process">
             <div class="title_wrap">
                 <figure class="deco_square">
-                    <img src="./image/decosquare.png" alt="장식용단추">
+                    <img src="./image/decosquare.png" alt="장식사각형">
                 </figure>
                 <h2 class="section_title">Process</h2>
             </div>
@@ -211,19 +214,18 @@
             </div>
 
             <span class="bg_text">Consultation</span>
-        </div>
+        </section>
 
-        <div class="service">
-            <!--타이틀-->
+        <!--service section-->
+        <section id="service" class="service">
             <div class="title_wrap">
                 <figure class="deco_square">
-                    <img src="decosquare.png" alt="장식 사각형">
+                    <img src="./image/decosquare.png" alt="장식사각형">
                 </figure>
                 <h2 class="section_title">Service & Expertise</h2>
 
             </div>
 
-            <!--service list-->
             <div class="service_list">
                 <div class="service_item">
                     <figure>
@@ -253,14 +255,15 @@
                     <h3>Cafe & Retail</h3>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="inquiry">
+        <!--inquiry section-->
+        <section id="inquiry" class="inquiry">
             <!--백그라운드 사진 깔기-->
             <h2>"당신의 아이디어를 형태로 만듭니다."</h2>
             <p>프로젝트 이야기를 들려주세요.</p>
             <a href="#contact" class="btn_inquiry">견적문의</a>
-        </div>
+        </section>
     </main>
 
     <footer class="footer">
