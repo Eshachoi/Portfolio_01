@@ -7,21 +7,31 @@ body {
     background-color: #F6F2EC;
 }
 
-/*header 시작*/
-header {
+/*header_menu 시작*/
+.main_section {
     width: 100%;
-    height: 100px;
-    padding: 0 50px;
+    height: 100vh;
+    /* padding: 0 50px; */
     box-sizing: border-box;
+    position: relative;
 }
-.header_content {
+
+.header_contents {
+  padding: 0 50px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background: #F6F2EC;
+}
+.header_menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
-.header_content a {
+.header_menu a {
     width: 110px;
-    height: 40px;
     text-decoration: none;
     font-family: "Antic Didone", serif;
     color: #595049;
@@ -35,6 +45,8 @@ header {
     width: 24px;
     height: 24px;
     color: #595049;
+    z-index: 9;
+    
 }
 /*off-canvas menu 작업*/
 .menu_btn {
@@ -77,33 +89,35 @@ header {
 .nav_menu li a:hover {
   color: #A48D78;
 }
-/*header 끝*/
+/*header_menu 끝*/
 
-/*main 시작*/
-.main_view {
+/*header_main 시작*/
+.header_menu {
+  margin: 0;
+  padding: 0;
+}
+.header_main {
   display: flex;
   flex-direction: row;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .main_left {
-  width: 807px;
-  height: 1000px;
+  width: 40%;
 }
 .content_box h2 {
   font-family: "Antic Didone", serif;
   font-size: 73px;
   color: #595049;
   line-height: 1.2;
-  margin-top: 300px;
-  margin-left: 126px;
 }
 .content_box p {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 20px;
   color: #595049;
   line-height: 1.5;
-  margin-top: 30px;
-  margin-left: 126px;
 }
 .content_box a {
   display: inline-block;
@@ -115,33 +129,38 @@ header {
   border: 1px solid #A48D78;
   border-radius: 50px;
   padding: 16px 10px;
-  margin-left: 190px;
-  margin-top: 30px;
 }
-  .main_right {
-  width: 1113px;
-  height: 1000px;
-  padding: 16px;
+.main_right {
+  width: 60%;
+  height: 100vh;
+}
+.main_right img {
+  box-sizing: content-box;
+  width: 100%;
+  height: 100vh;
 }
 
-/*main 끝*/
+/*header_main 끝*/
 
 /*About 시작*/
 .about {
+  padding: 0;
+  margin: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   overflow: hidden;
-  margin-top: 300px;
+  margin-top: 200px;
 }
-.about .img_box {
+
+.about_pic .img_box {
   position: absolute;
   overflow: hidden;
   z-index: 1;
 }
-.about .img_box_img01,
-.about .img_box_img02,
-.about .img_box_img03 {
+.about_pic .img_box_img01,
+.about_pic .img_box_img02,
+.about_pic .img_box_img03 {
   width: 100%;
   height: auto;
   display: block;
@@ -149,21 +168,27 @@ header {
   position: absolute;  
 }
 
-.about .img_box_img01 {
+.about_pic .img_box_img01 {
   top: 10%;
-  left: 15%;
-  width: 35%;
+  left: 10%;
+  width: 611px;
+  height: 611px;
+  opacity: 0.6;
 }
 
-.about .img_box_img02 {
+.about_pic .img_box_img02 {
   top: 18%;
-  right: 17%;
-  width: 25%;
+  right: 10%;
+  width: 509px;
+  height: 509px;
+  opacity: 0.6;
 }
-.about .img_box_img03 {
-  bottom: 2%;
+.about_pic .img_box_img03 {
+  bottom: 1%;
   left: 38%;
-  width: 30%;
+  width: 430px;
+  height: 430px;
+  opacity: 0.6;
 }
 .about .text_box {
   position: absolute;
@@ -200,7 +225,7 @@ header {
   color: #3e322a;
   
 }
-.about p {
+.text_box p {
   font-family: "Antic Didone", serif;
   font-weight: 300;
   font-size: 2.4rem;
@@ -286,7 +311,7 @@ header {
 .rest {
   width: 100%;
   height: 1048px;
-  background-image: url(mid-background.png);
+  background-image: url(../image/mid-background.png);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -411,14 +436,14 @@ header {
 }
 
 .content_box {
-  width: 400px;
-  height: 300px;
+  height: 100%;
   box-sizing: border-box;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 24px;
 }
 .tab_content .content_box h4 {
   font-family: "Noto Sans KR", sans-serif;
