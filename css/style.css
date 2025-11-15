@@ -17,7 +17,7 @@ body {
   background-color: #F6F2EC;
   z-index: 100;
   top: 0;
-  padding: 30px 50px;
+  padding: 27px 50px;
   justify-content: center;
 }
 .header_menu {
@@ -27,7 +27,6 @@ body {
   align-items: center;
   box-sizing: border-box;
   position: relative;
-  padding: 0 80px;
 }
 .contact_btn {
   text-decoration: none;
@@ -49,8 +48,7 @@ body {
 .menu_btn {
   font-size: 1.6rem;
   color: #595049;
-  cursor: pointer; 
-  z-index: 10;
+  cursor: pointer;  
 }
 /*슬라이드 메뉴*/
 .nav_menu {
@@ -102,12 +100,12 @@ body {
   flex-direction: row;
 }
 .main_left {
-  flex: 0 0 40%;
+  width: 40%;
   background-color: #F6F2EC;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 150px;
+  padding-left: 190px;
 }
 .content_box h2 {
   font-family: "Antic Didone", serif;
@@ -135,7 +133,7 @@ body {
   margin-top: 30px;
 }
 .main_right {
-  flex: 0 0 60%;
+  width: 60%;
   height: 100%;
 }
 .main_right img {
@@ -146,13 +144,11 @@ body {
 
 /*About 시작*/
 .about {
-  padding: 0;
-  margin: 0;
   width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
-  margin-top: 200px;
+  margin-top: 60px;
 }
 
 .about_pic .img_box {
@@ -171,26 +167,27 @@ body {
 }
 
 .about_pic .img_box_img01 {
-  top: 10%;
+  top: 7%;
   left: 10%;
   width: 611px;
   height: 611px;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .about_pic .img_box_img02 {
-  top: 18%;
-  right: 10%;
-  width: 509px;
-  height: 509px;
-  opacity: 0.6;
+  top: 19%;
+  right: 12%;
+  width: 450px;
+  height: 450px;
+  opacity: 0.9;
 }
 .about_pic .img_box_img03 {
-  bottom: 1%;
-  left: 38%;
-  width: 430px;
-  height: 430px;
-  opacity: 0.6;
+  top: 65%;
+  left: 40%;
+  width: 410px;
+  height: 410px;
+  z-index: 2;
+  stop-opacity: 0.9;
 }
 .about .text_box {
   position: absolute;
@@ -210,29 +207,22 @@ body {
   transform: translateY(0);
   transition: opacity 1s ease, transform 1s ease-out;
 }
-.about .text_box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 5;
-}
-
 .about .text_box h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 3.6rem;
+  font-size: 3.8rem;
   color: #3e322a;
-  
+  margin-bottom: 70px;
+  align-items: center;
 }
 .text_box p {
-  font-family: "Antic Didone", serif;
-  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   font-size: 2.4rem;
   color: #3e322a;
-  margin: 6px 0;
+  margin: 20px 0;
+  align-items: center;
 }
 .parallax_active {
   transform: translateY(var(--parallax-shift, 0px));
@@ -279,7 +269,7 @@ body {
   font-family: "Antic Didone", serif;
   font-size: 48px;
   color: #595049;
-  transform: translateY(150px);
+  transform: translateY(160px) translateX(50px);
   letter-spacing: 2px;
 }
 .scroll_container {
@@ -336,10 +326,10 @@ body {
 /*process 시작*/
 .process {
   width: 100%;
+  max-width: 1900px;
   min-height: 100vh;
-  box-sizing: border-box;
-  display: block;
-  position: relative;
+  margin: 0 auto;
+  padding: 0 60px;
 }
 .process .title_wrap {
   position: relative;
@@ -364,7 +354,7 @@ body {
   font-family: "Antic Didone", serif;
   font-size: 48px;
   color: #595049;
-  transform: translateY(90px);
+  transform: translateY(140px) translateX(-40px);
   letter-spacing: 2px;
   margin-left: 90px;
 }
@@ -382,30 +372,57 @@ body {
 
 .process_tabs {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 200px;
+  padding: 0 100px;
   align-items: center;
+  justify-content: flex-start;
   cursor: pointer;
   transition: all 0.3s ease;
-  justify-content: space-around;
-  margin: 100px 0;
+  margin-top: 80px;
+  margin-bottom: 70px;
+  transform: translateX(-130px);
 }
-
+.tab {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.tab_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
 .tab .num {
   font-family: 'Abhaya Libre', serif;
   font-size: 96px;
+  line-height: 1;
+  margin-bottom: -6px;
   font-weight: bold;
   color: #595049;
   opacity: 0.04;
   transition: opacity 0.4s ease;
+  display: block;
 }
 .tab .label {
   font-family: "Antic Didone", serif;
   font-size: 36px;
   color: #595049;
-  margin-top: -50px;
-  margin-left: 70px;
+  margin-top: -30px;
+  margin-left: 80px;
   opacity: 0.28;
   transition: opacity 0.4s ease;
+}
+.tab.active .num {
+  color: #3a2f28;
+}
+.tab.active .label {
+  color: #3a2f28;
 }
 .tab.active .num,
 .tab.active .label {
@@ -420,83 +437,46 @@ body {
   transition: all 0.6s ease;;
 }
 .tab_content {
-  width: 400px;
-  height: 300px;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transition: all 0.6s ease;
-  opacity: 0.7;
-  transform: scale(1);
-  transform-origin: center;
-  z-index: 2;
-  position: relative;
-}
-
-.content_box {
-  height: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-.tab_content .content_box h4 {
-  font-family: "Noto Sans KR", sans-serif;
-  color: #595049;
-  font-weight: 500;
-  font-size: 20px;
-  margin: 0;
-  opacity: 1;
-  text-align: center;
-  margin-bottom: 50px;
-}
-.tab_content .content_box p {
-  font-family: "Noto Sans KR", sans-serif;
-  color: #595049;
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 1.6;
-  margin-top: 20px;
-  opacity: 0;
-  box-sizing: border-box;
-  display: block;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
   width: 100%;
-  height: 100%;
-  max-width: 420px;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-  margin: 0;
-  padding: 0;
+  max-width: 550px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.5s ease;
+  transform: translateY(0);
+  cursor: pointer;
+  overflow: hidden;
+}
+.tab_content h4 {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #595049;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.tab_content p {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  margin-top: 0;
 }
 .tab_content.active {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.3);
-  width: 600px;
-  height: 400px;
-  opacity: 1;
-  z-index: 50;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+  transform: translateY(-20px) scale(1.02);
+  padding: 60px 40px;
 }
-.tab_content.active .content_box p {
-  opacity: 1;
-  transform: translateY(0);
-  
+.tab_content.active h4 {
+  font-weight: 700;
+  font-size: 26px;
 }
-.tab_content.active .content_box {
+.tab_content.active p {
   opacity: 1;
-  transform: translateY(0);
+  max-height: 500px;
+  margin-top: 20px;
+  text-align: center;
 }
 .bg_text {
   position: absolute;
@@ -528,8 +508,6 @@ body {
   text-align: center;
   margin: 150px 0 0 0;
 }
-
-
 .service .deco_square img{
   width: 170px;
   height: 170px;
@@ -542,11 +520,11 @@ body {
 .service .section_title {
   position: relative;
   z-index: 1;
-  font-family: "GounBatang", serif;
-  font-weight: 100;
+  font-family: "Antic Didone", serif;
+  font-weight: 600;
   font-size: 48px;
   color: #595049;
-  transform: translateY(90px);
+  transform: translateY(130px);
   letter-spacing: 2px;
 }
 
